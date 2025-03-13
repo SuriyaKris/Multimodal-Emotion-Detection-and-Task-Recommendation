@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multimodal Emotion Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Multimodal Emotion Detection</h1>
+        <p>Select an input mode and analyze emotions in real-time.</p>
+        
+        <div class="button-container">
+            <button onclick="chooseMode('text')">📖 Text Emotion</button>
+            <button onclick="chooseMode('speech')">🎤 Speech Emotion</button>
+            <button onclick="chooseMode('facial')">📷 Facial Emotion</button>
+        </div>
+
+        <div id="inputArea">
+            <textarea id="textInput" placeholder="Enter text..." style="display: none;"></textarea>
+            <button id="analyzeButton" onclick="analyzeEmotion()">Analyze Emotion</button>
+        </div>
+
+        <div id="resultContainer">
+            <h2 id="result"></h2>
+            <h3 id="suggestion"></h3>
+        </div>
+    </div>
+</body>
+</html>
